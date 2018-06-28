@@ -9,7 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var lbText: UILabel!
+    var count = 0
+    
+    @IBAction func actionClickButton(_ sender: Any) {
+        if count == 0{
+            lbText.text = "Text 1"
+            count = count + 1
+        }
+        else{
+            lbText.text = "Text 2"
+            count = 0
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
